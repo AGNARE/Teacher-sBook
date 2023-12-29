@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.studentReportsCard.totalPoints.TotalPointsFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_share"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_share"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_edit"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_edit_group"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:visibility="gone"
+        android:id="@+id/btn_complate"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_check"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_share">
+
+        <TextView
+            android:id="@+id/tv_name_student"
+            android:layout_width="110dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_text_view_visits_for_table"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/tv_fcs_student"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_fcs_student"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_text_view_visits_for_table"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/tv_example_name_group"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_group"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_group"
+            android:layout_width="110dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_text_view_visits_white"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/tv_group"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_student"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name_group"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_text_view_visits_white"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/tv_example_name_group"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_fcs_student"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_group"
+           />
+
+        <TextView
+            android:id="@+id/et_module_first"
+            android:layout_width="110dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_text_view_visits_gray"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/et_module_first"
+            android:maxLines="1"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_group" />
+
+        <EditText
+            android:fontFamily="@font/roboto_medium"
+            android:enabled="false"
+            android:inputType="number"
+            android:id="@+id/et_point_module_first"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:autofillHints="phone"
+            android:background="@drawable/bg_text_view_visits_gray"
+            android:gravity="center"
+            android:hint="@string/_0"
+            android:maxLines="1"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/blue"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/et_module_first"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_group" />
+
+        <TextView
+            android:id="@+id/et_module_second"
+            android:layout_width="110dp"
+            android:layout_height="64dp"
+            android:autofillHints="name"
+            android:background="@drawable/bg_text_view_visits_white"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/et_module_second"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_module_first" />
+
+        <EditText
+            android:fontFamily="@font/roboto_medium"
+            android:enabled="false"
+            android:inputType="number"
+            android:id="@+id/et_point_module_second"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:autofillHints="phone"
+            android:background="@drawable/bg_text_view_visits_white"
+            android:gravity="center"
+            android:hint="@string/_0"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/blue"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/et_module_second"
+            app:layout_constraintTop_toBottomOf="@id/et_point_module_first" />
+
+        <TextView
+            android:id="@+id/tv_final_control"
+            android:layout_width="110dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_text_view_visits_gray"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/tv_final_control"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_module_second" />
+
+        <EditText
+            android:fontFamily="@font/roboto_medium"
+            android:enabled="false"
+            android:inputType="number"
+            android:id="@+id/et_final_control_point"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:autofillHints="phone"
+            android:background="@drawable/bg_text_view_visits_gray"
+            android:gravity="center"
+            android:hint="@string/_0"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/blue"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_final_control"
+            app:layout_constraintTop_toBottomOf="@id/et_point_module_second" />
+
+        <TextView
+            android:id="@+id/tv_additionally"
+            android:layout_width="110dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_text_view_visits_white"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/tv_additionally"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_final_control" />
+
+        <EditText
+            android:fontFamily="@font/roboto_medium"
+            android:enabled="false"
+            android:inputType="number"
+            android:id="@+id/et_additionally_point"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:autofillHints="phone"
+            android:background="@drawable/bg_text_view_visits_white"
+            android:gravity="center"
+            android:hint="@string/_0"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/blue"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_additionally"
+            app:layout_constraintTop_toBottomOf="@id/et_final_control_point" />
+
+        <TextView
+            android:id="@+id/tv_total_score"
+            android:layout_width="110dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_text_view_visits_for_table"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/tv_total_score"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_additionally" />
+
+        <TextView
+            android:fontFamily="@font/roboto_medium"
+            android:id="@+id/et_total_score_point"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:enabled="false"
+            android:autofillHints="phone"
+            android:background="@drawable/bg_text_view_visits_for_table"
+            android:gravity="center"
+            android:hint="@string/_0"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/blue"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_total_score"
+            app:layout_constraintTop_toBottomOf="@id/et_additionally_point" />
+
+        <TextView
+            android:id="@+id/tv_estimation"
+            android:layout_width="110dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_text_view_visits_for_table"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/tv_estimation"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_total_score_point" />
+
+        <TextView
+            android:id="@+id/tv_estimation_point"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_text_view_visits_for_table"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/tv_estimation_point"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/tv_estimation"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_score" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

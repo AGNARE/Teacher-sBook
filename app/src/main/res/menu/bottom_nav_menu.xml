@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/subjectsFragment"
+        android:icon="@drawable/ic_subject"
+        android:title="@string/menu_subject_txt" />
+
+    <item
+        android:id="@+id/addGroupsFragment"
+        android:icon="@drawable/ic_add_groups"
+        android:title="@string/menu_group_txt" />
+
+</menu>

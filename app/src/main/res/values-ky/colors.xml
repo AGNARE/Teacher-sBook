@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#123B61</color>
+    <color name="blue_weekday">#89BDDA</color>
+    <color name="blue_grades_text">#252742</color>
+    <color name="blue_grades_background">#89BDDA</color>
+    <color name="blue_item_group">#4576F6</color>
+    <color name="blue_lesson_name">#4475BC</color>
+    <color name="gray">#CDCDCD</color>
+    <color name="gray_white">#F2F2F2</color>
+    <color name="text_gray">#909090</color>
+    <color name="grey">#CBC0C0C0</color>
+    <color name="grey_item_choose_a_student">#F2F2F2</color>
+    <color name="tv_date_color">#051B44</color>
+    <color name="btn_blue">#0066FF</color>
+
+    <color name="gray_borders_grades">#CAC4D0</color>
+    <color name="text_toolbar">#252742</color>
+    <color name="bottom_nav_color_objects">#89BDDA</color>
+    <color name="green">#00B11C</color>
+    <color name="red">#E00000</color>
+    <color name="main_gray">#F2F2F2</color>
+    <color name="transparent">#00FFFFFF</color>
+
+</resources>

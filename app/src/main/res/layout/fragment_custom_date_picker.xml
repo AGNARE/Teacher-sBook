@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_date_picker"
+    tools:context=".ui.fragments.customdateppicker.CustomDatePickerFragment">
+
+    <ImageButton
+        android:id="@+id/btn_prev_month"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_previous_month"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="@id/tv_month_year"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_month_year" />
+
+    <TextView
+        android:id="@+id/tv_month_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="17 октября"
+        android:textAlignment="center"
+        android:textColor="@color/tv_date_color"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_next_month"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_next_month"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="@id/tv_month_year"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_month_year" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_week"
+        android:paddingVertical="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_month_year">
+
+        <TextView
+            android:id="@+id/textViewMon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/tv_mon"
+            android:textColor="@color/blue_weekday"
+            app:layout_constraintEnd_toStartOf="@id/textViewTd"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/tv_td"
+            android:textColor="@color/blue_weekday"
+            app:layout_constraintEnd_toStartOf="@id/textViewWd"
+            app:layout_constraintStart_toEndOf="@id/textViewMon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewWd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/tv_wd"
+            android:textColor="@color/blue_weekday"
+            app:layout_constraintEnd_toStartOf="@id/textViewThd"
+            app:layout_constraintStart_toEndOf="@id/textViewTd"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewThd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/tv_thd"
+            android:textColor="@color/blue_weekday"
+            app:layout_constraintEnd_toStartOf="@id/textViewFd"
+            app:layout_constraintStart_toEndOf="@id/textViewWd"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewFd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/tv_fd"
+            android:textColor="@color/blue_weekday"
+            app:layout_constraintEnd_toStartOf="@id/textViewStd"
+            app:layout_constraintStart_toEndOf="@id/textViewThd"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewStd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/tv_std"
+            android:textColor="@color/blue_weekday"
+            app:layout_constraintEnd_toStartOf="@id/textViewSnd"
+            app:layout_constraintStart_toEndOf="@id/textViewFd"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewSnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/tv_snd"
+            android:textColor="@color/blue_weekday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textViewStd"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendarRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/cl_week"
+        app:spanCount="7"
+        tools:listitem="@layout/item_date" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

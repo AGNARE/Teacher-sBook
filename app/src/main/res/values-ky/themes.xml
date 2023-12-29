@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TeachersBook" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="CustomBottomNavigationViewStandard" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@drawable/color_state_bottom_nav</item>
+        <item name="itemTextColor">@drawable/color_state_bottom_nav</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Overlay.MyApp.FloatingActionButton" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <!--    style=”@style/Widget.MaterialComponents.BottomAppBar”-->
+
+    <style name="Theme.TeachersBook" parent="Base.Theme.TeachersBook"/>
+
+</resources>

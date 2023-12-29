@@ -1,0 +1,44 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboard_graph.xml"
+    app:startDestination="@id/languageSelectionFragment">
+
+    <fragment
+        android:id="@+id/fontSelectionFragment"
+        android:name="com.geeksPro.teachersbook.ui.fragments.onBoardFragments.fontselection.FontSelectionFragment"
+        android:label="fragment_language_selection"
+        tools:layout="@layout/fragment_font_selection" />
+
+    <fragment
+        android:id="@+id/languageSelectionFragment"
+        android:name="com.geeksPro.teachersbook.ui.fragments.onboardfragments.languageselection.LanguageSelectionFragment"
+        android:label="LanguageSelectionFragment"
+        tools:layout="@layout/fragment_language_selection">
+
+        <action
+            android:id="@+id/action_languageSelectionFragment_to_fontSelectionFragment"
+            app:destination="@id/fontSelectionFragment"
+         />
+    </fragment>
+
+    <fragment
+        android:id="@+id/readyFragment"
+        android:name="com.geeksPro.teachersbook.ui.fragments.onBoardFragments.ready.ReadyFragment"
+        android:label="ReadyFragment"
+        tools:layout="@layout/fragment_ready">
+
+        <action
+            android:id="@+id/action_readyFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/onboard_graph.xml"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.geeksPro.teachersbook.ui.fragments.mainfragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+
+</navigation>

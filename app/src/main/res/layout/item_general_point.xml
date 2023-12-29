@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="90dp"
+        android:layout_height="42dp"
+        android:background="@drawable/bg_general_practice"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="@string/tv_november_general_practice"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/et_grades"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/bg_general_practice"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="@string/tv_0_general_practice"
+        android:textColor="@color/blue"
+        android:textSize="12sp" />
+
+</LinearLayout>
